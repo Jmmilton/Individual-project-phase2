@@ -1,0 +1,402 @@
+body,
+html {
+  font-family: "Libre Baskerville", serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main,
+body {
+  background-image: url(./images/pexels-adrien-olichon-2387793.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  color: gainsboro;
+  height: 100%;
+}
+
+.header {
+  text-align: center;
+}
+
+.first,
+.last {
+  font-family: "Libre Baskerville", serif;
+  font-size: 90px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+.first {
+  padding-right: 89px;
+  padding-top: 23.7vh;
+}
+
+.last {
+  margin-top: -20px;
+}
+
+.animate__animated.animate__fadeInRight,
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 2.5s;
+}
+
+.header-sub {
+  margin-top: 20vh;
+}
+
+/* Arrows */
+
+.arrow {
+  transition: ease-in-out 300ms;
+  margin-top: 10vh;
+}
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #06a8ff;
+  border-right: 5px solid #06a8ff;
+  transform: rotate(45deg);
+  margin: 0 auto;
+  cursor: pointer;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+/*  */
+
+.about {
+  margin: 40px;
+  word-wrap: break-word;
+  text-align: center;
+  padding-top: 40px;
+}
+
+img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.hidden {
+  opacity: 0;
+  transition: ease-in-out 300ms;
+}
+
+.hide-arrow {
+  opacity: 0;
+  transition: ease-in-out 300ms;
+  pointer-events: none;
+}
+
+.nav {
+  transition: ease-in-out 300ms;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.nav-div {
+  height: 50px;
+}
+
+.nav a {
+  text-decoration: none;
+  cursor: pointer;
+  color: gainsboro;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  transition: ease-in-out 200ms;
+}
+
+.nav li {
+  display: inline;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  padding-top: 30px;
+}
+
+.nav a:hover {
+  transition: ease-in-out 200ms;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+.about-div {
+  padding: 25px;
+  padding-right: 70px;
+  padding-left: 100px;
+}
+
+.about h2 {
+  padding-bottom: 40px;
+  text-decoration: underline;
+}
+
+.about p {
+  line-height: 50px;
+  font-size: 25px;
+  display: inline;
+}
+
+.home-img {
+  /* max-width: 100%;
+  height: auto; */
+  float: right;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding: 30px;
+}
+
+/* Project Gallery */
+
+.project-gallery {
+  display: inline;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.project-item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 410px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.project-item:hover {
+  cursor: pointer;
+}
+
+.project-item * {
+  transition: all 0.35s ease-in-out;
+}
+
+.project-img {
+  max-width: 100%;
+  vertical-align: top;
+  height: 310px;
+}
+
+.project-item:hover img {
+  opacity: 0.1;
+}
+
+.project-info {
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  top: -100px;
+  left: 10%;
+  color: #01a2ac;
+}
+
+.project-info h3 {
+  color: gainsboro;
+}
+
+.project-item:hover .project-info {
+  top: 20%;
+}
+
+.project-item:hover .go-btn {
+  bottom: 20%;
+}
+
+.project-item .go-btn {
+  position: absolute;
+  bottom: -100px;
+  left: 25%;
+  width: 50%;
+  border: 3px solid #01a2ac;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.go-btn:hover {
+  background-color: purple;
+}
+
+.btn-link {
+  color: gainsboro;
+}
+
+.contact-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding-top: 60px;
+}
+
+form {
+  text-align: center;
+  padding: 25px;
+  border: purple 2px solid;
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  width: 40%;
+}
+
+.form-btn {
+  margin-top: 15px;
+  background: purple;
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+  height: 35px;
+  cursor: pointer;
+  color: gainsboro;
+  transition: ease-in-out 250ms;
+}
+
+.form-btn:hover {
+  color: black;
+  background: gainsboro;
+  transition: ease-in-out 250ms;
+}
+
+.contact-h2,
+.work-h2,
+.project-h2 {
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.work-div {
+  display: inherit;
+  height: 100px;
+  width: 500px;
+  margin-left: 30%;
+}
+
+.work-div h3 {
+  text-decoration: underline;
+}
+
+.work-seperation {
+  width: 44%;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  border: purple 1px solid;
+}
+
+.resume {
+  display: inline-block;
+  width: inherit;
+}
+
+.dl-resume {
+  padding-top: 60px;
+}
+
+.dl-resume-btn {
+  background: purple;
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+  height: 35px;
+  cursor: pointer;
+  color: gainsboro;
+  transition: ease-in-out 250ms;
+  display: block;
+}
+
+.dl-resume-btn:hover {
+  color: black;
+  background: gainsboro;
+  transition: ease-in-out 250ms;
+}
+
+/* Footer */
+
+hr {
+  margin-bottom: 55px;
+  clear: both;
+}
+
+footer {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-top {
+  padding: 20px;
+}
+
+.footer a {
+  border: none;
+  outline: none;
+  color: gainsboro;
+  margin-right: 30px;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+
+.footer-top i {
+  text-decoration: none;
+  transition: 300ms ease-in-out;
+}
+
+.footer-top i:hover {
+  font-size: 25px;
+  transition: 300ms ease-in-out;
+  text-decoration: none;
+  color: purple;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+}
+
+/* Footer  */
